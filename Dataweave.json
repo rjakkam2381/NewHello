@@ -1,0 +1,372 @@
+input
+[
+  {
+    "DimProducskey": [
+      {
+        "DimProducskey": 1
+      }
+    ],
+    "DrawId": "6145"
+  },
+  {
+    "DimProducskey": [
+      {
+        "DimProducskey": 2
+      }
+    ],
+    "DrawId": "6146"
+  }
+]
+
+o/p:
+[
+  {
+    "DimProducskey": 1,
+    "DrawId": "6145"
+  },
+  {
+    "DimProducskey": 2,
+    "DrawId": "6146"
+  }
+]
+
+%dw 2.0
+output application/json
+---
+payload map ((item, index) -> {
+    "DimProducskey": item.DimProducskey.DimProducskey[0],
+    "DrawId": item.DrawId
+})
+
+
+-------------------------------------------------------------------------------------------------------------
+
+I/p
+{
+  "scannedCount": 1,
+  "count": 1,
+  "lastEvaluatedKey": null,
+  "consumedCapacity": null,
+  "items": [
+    {
+      "AgencyName": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": null,
+        "bs": null,
+        "s": "4 Skyline"
+      },
+      "QueueCategory": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": null,
+        "bs": null,
+        "s": "235"
+      },
+      "SalesforceAccountId": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": null,
+        "bs": null,
+        "s": "111111"
+      },
+      "ClientIdentifier": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": null,
+        "bs": null,
+        "s": "34"
+      },
+      "CountryName": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": null,
+        "bs": null,
+        "s": "Afghanistan"
+      },
+      "FeedId": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": "9222",
+        "bs": null,
+        "s": null
+      },
+      "IsFeedDiscontinued": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": "0",
+        "bs": null,
+        "s": null
+      },
+      "FeedName": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": null,
+        "bs": null,
+        "s": "DEMO ORG Apollo Afghanistan 4 Skyline"
+      },
+      "GdsPartitionKey": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": null,
+        "bs": null,
+        "s": "Apollo16NY235223534"
+      },
+      "Pcc": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": null,
+        "bs": null,
+        "s": "16NY"
+      },
+      "QueueNumber": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": "2352",
+        "bs": null,
+        "s": null
+      },
+      "FeedEntry": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": null,
+        "bs": null,
+        "s": "auto"
+      },
+      "InsertedDate": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": null,
+        "bs": null,
+        "s": "2022-10-28 10:14:17"
+      },
+      "GdsName": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": null,
+        "bs": null,
+        "s": "Apollo"
+      },
+      "CustomerName": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": null,
+        "bs": null,
+        "s": "DEMO ORG"
+      },
+      "IsFeedActive": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": "1",
+        "bs": null,
+        "s": null
+      },
+      "InsertedBy": {
+        "ss": null,
+        "nullvalue": null,
+        "b": null,
+        "bool": null,
+        "ns": null,
+        "l": null,
+        "m": null,
+        "n": null,
+        "bs": null,
+        "s": ""
+      }
+    }
+  ]
+}
+
+o/p:
+{
+  "AgencyName": "4 Skyline",
+  "QueueCategory": "235",
+  "SalesforceAccountId": "111111",
+  "ClientIdentifier": "34",
+  "CountryName": "Afghanistan",
+  "FeedId": "9222",
+  "IsFeedDiscontinued": "0",
+  "FeedName": "DEMO ORG Apollo Afghanistan 4 Skyline",
+  "GdsPartitionKey": "Apollo16NY235223534",
+  "Pcc": "16NY",
+  "QueueNumber": "2352",
+  "FeedEntry": "auto",
+  "InsertedDate": "2022-10-28 10:14:17",
+  "GdsName": "Apollo",
+  "CustomerName": "DEMO ORG",
+  "IsFeedActive": "1",
+  "InsertedBy": ""
+}
+
+Dw Code:
+
+%dw 2.0
+output application/json 
+---
+(payload.items[0] mapObject ((value, key, index) -> {
+    (key): (value filterObject ((value) -> value != null))..[0]
+}))
+
+reference lnk: https://help.mulesoft.com/s/question/0D52T00005AjEfSSAV/how-to-remove-empty-values-from-json-object
+-------------------------------------------------------------------------------------------------------------------
+
+i/p
+[
+  {
+    "TableData": "test1"
+  },
+  {
+    "TableData": "test2"
+  },
+  {
+    "TableData": "test3"
+  },
+  {
+    "TableData": "test4"
+  },
+  {
+    "TableData": "test5"
+  },
+  {
+    "TableData": "test6"
+  }
+]
+o/p:
+"test1test2test4test5test6"
+Dw
+%dw 2.0
+output application/json
+---
+payload reduce (((item, accumulator="") -> if(item.TableData != "test3") (accumulator ++ item.TableData) else accumulator))
+--------------------------------------------------------------------------------------------------------------------------------
+
+i/p:
+[
+  {
+    "id": "A",
+    "name": "123",
+    "bossID": "B"
+  },
+  {
+    "id": "B",
+    "name": "456",
+    "bossID": "C"
+  },
+  {
+    "id": "C",
+    "name": "789",
+    "bossID": "A"
+  }
+]
+
+o/p:
+[
+  {
+    "bossname": "123",
+    "bossid": "456"
+  },
+  {
+    "bossname": "456",
+    "bossid": "789"
+  },
+  {
+    "bossname": "789",
+    "bossid": "123"
+  }
+] 
+
+DW:
+%dw 2.0
+output application/json
+---
+payload map ((item, index) -> {
+    "bossname": item.name,
+    "bossid": (payload filter ( $.id == item.bossID ))[0].name
+})
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
